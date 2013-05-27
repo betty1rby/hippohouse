@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/matrix-style.css" />
+  <style>
+  input[type=radio]{margin-bottom: 5px;}
+  </style>
+</head>
+<body>
+	<div class="#">
+  <table class="idTable" style="width:513px;">
+    <tr>
+      <td>锁定对象(用户名): <span>lisa</span></td>
+      <td>所在群组: <span> 实名认证用户</span></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div style="float:left">锁定原因：</div>
+      	<div style="float:left;margin-left:10px;">
+          <form action="#">
+            <table>
+              <tr>
+                <td><input type="radio" name="lockReason" id="steal" /> <label for="steal">盗用别人身份证</label></td>
+                <td><input type="radio" name="lockReason" id="unlawfulInfo" /><label for="unlawfulInfo">发布不良消息</label></td>
+              </tr>
+              <tr>
+                <td><input type="radio" name="lockReason" id="accountAbnormal" /><label for="accountAbnormal">帐户异常</label></td>
+                <td><input type="radio" name="lockReason" id="accountSteal" /><label for="accountSteal"> 该帐户被盗用</label></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+              <input type="radio" name="lockReason" id="otherReason" /><label for="otherReason">其他原因</label>
+              <textarea name="" id="" cols="30" rows="10" ></textarea> 
+          </form>
+        </div>
+       </td>
+    </tr>
+    <tr>
+      <td colspan="2">经办人:<span>wangwu/王五</span></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

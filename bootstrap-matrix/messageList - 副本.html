@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Matrix Admin</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+<link rel="stylesheet" href="css/uniform.css" />
+<link rel="stylesheet" href="css/select2.css" />
+<link rel="stylesheet" href="css/matrix-style.css" />
+<link rel="stylesheet" href="css/matrix-media.css" />
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+<!--Header-part-->
+
+<!--close-Header-part--> 
+
+<!--top-Header-menu-->
+<div id="user-nav" class="navbar navbar-inverse">
+  <ul class="nav">
+    <li><a href="#">2013年4月20日 上午9：00</a></li>
+    <li id="profile-messages" ><a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"><i class="icon icon-user"></i>  <span class="text" data-toggle="modal" href="#myModal">欢迎您，张苏南</span></a>
+    </li>
+    <li id="menu-messages"> <a href="messageList.html" target="_blank" ><i class="icon icon-envelope"></i> <span class="text">消息</span> <span class="label label-important">5</span></a>
+    </li>
+   <li class="">
+    <a title="" href="#"><i class="icon icon-warning-sign"></i> <span class="text">告警</span></a>
+   </li>
+   <li>
+    <a href="warning.html" target="_blank"><span class="badge badge-important">严重<span class="label label-important">2</span></span></a>
+   </li>
+   <li>
+    <a href="warning.html" target="_blank"><span class="badge badge-warning">中度<span class="label label-warning">7</span></span></a>
+   </li>
+   <li>
+    <a href="warning.html" target="_blank"><span class="badge">低度<span class="label">3</span></span></a>
+   </li>
+    <li class=""><a title="" href="login.html"><i class="icon icon-share-alt"></i> <span class="text">退出</span></a></li>
+  </ul>
+</div>
+
+<!--start-top-serch-->
+<!-- <div id="search">
+  <input type="text" placeholder="Search here..."/>
+  <button type="submit" class="tip-bottom" title="Search"><i class="icon-search icon-white"></i></button>
+</div> -->
+<!--close-top-serch--> 
+
+<!--sidebar-menu-->
+
+<div id="sidebar"><a href="#" class="visible-phone"><i class="icon icon-home"></i>首页</a>
+  <ul>
+    <li><a href="index.html"><i class="icon icon-home"></i> <span>首页</span></a> </li>
+    <li class="submenu active"><a href="#"><i class="icon icon-fullscreen"></i> <span>内容管理</span><span class="label label-important">3</span></a>
+      <ul>
+        <li><a href="worms.html">爬虫管理</a></li>
+        <li><a href="">检索管理</a></li>
+        <li><a href="">内容管理</a></li>
+      </ul>
+    </li> 
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>日志管理</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li ><a href="#">业务日志</a></li>
+        <li><a href="#">系统日志</a></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>终端管理</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li ><a href="#">终端信息</a></li>
+        <li><a href="#">终端监控</a></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>服务仓库管理</span> <span class="label label-important">3</span></a>
+      <ul>
+        <li ><a href="#">服务基本信息管理</a></li>
+        <li><a href="#">服务上传</a></li>
+        <li><a href="#">服务下发</a></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>第三方服务管理</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li ><a href="#">基本信息</a></li>
+        <li><a href="#">配置信息</a></li>
+      </ul>
+    </li>
+     <li><a href="#"><i class="icon icon-home"></i> <span>用户注册设置</span></a> </li>
+     <li><a href="#"><i class="icon icon-home"></i> <span>服务业务管理</span></a> </li>
+     <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>路由管理</span> <span class="label label-important">3</span></a>
+      <ul>
+        <li ><a href="#">路由信息管理</a></li>
+        <li><a href="#">访问策略管理</a></li>
+        <li><a href="#">访问隔离管理</a></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>开发环境管理</span> <span class="label label-important">1</span></a>
+      <ul>
+        <li ><a href="#">沙箱环境配置</a></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>负载均衡管理</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li ><a href="#">负载算法查询</a></li>
+        <li ><a href="#">负载算法设置</a></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>数据库服务管理</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li ><a href="#">负载算法查询</a></li>
+        <li ><a href="#">负载算法设置</a></li>
+      </ul>
+    </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>信息安全管理</span> <span class="label label-important">6</span></a>
+      <ul>
+        <li ><a href="#">企业安全组织方式</a></li>
+        <li ><a href="#">资产分类与控制</a></li>
+        <li ><a href="#">物理与环境安全</a></li>
+        <li ><a href="#">访问控制</a></li>
+        <li ><a href="#">业务连续性管理</a></li>
+        <li ><a href="#">人员安全</a></li>
+        <li ><a href="#">通信与运营安全</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div id="content">
+  
+  <div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="widget-box">
+       <!--  <div class="widget-title"> <span class="icon"> <i class="icon-align-justify"></i> </span>
+          <h5>Form Elements</h5>
+        </div> -->
+        <div class="widget-content nopadding">
+          <form action="#" method="get" class="form-horizontal">
+            <div class="control-group span6">
+              <label class="control-label">来源网站:</label>
+              <div class="controls">
+                <select >
+                  <option>佛山市政府网-今日要闻</option>
+                  <option>Second option</option>
+                  <option>Third option</option>
+                  <option>Fourth option</option>
+                  <option>Fifth option</option>
+                  <option>Sixth option</option>
+                  <option>Seventh option</option>
+                  <option>Eighth option</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group span6">
+              <label class="control-label">标题:</label>
+              <div class="controls">
+                <input type="text" class="span11" placeholder="请输入文本..." />
+              </div>
+            </div>
+           <div class="control-group">
+             <!--  <label class="control-label">网页时间：</label>
+              <div class="controls ">
+                <input type="text" data-date="01-02-2013" data-date-format="dd-mm-yyyy" value="01-02-2013" class="datepicker span4">
+                <span class="help-block">请选择时间</span> </div> -->
+           <div class="form-actions" style="border:none;">
+            <button type="submit" class="btn btn-success pull-right">重置</button>
+              <button type="submit" class="btn btn-success pull-right"  style="margin-right:10px;">查询</button>
+            </div>
+            </div>
+             
+          </form>
+        </div>
+      </div>
+     
+    </div>
+   
+  </div>
+   
+    <div class="row-fluid">
+      <div class="span12">
+       <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-file"></i> </span>
+            <h5>消息列表</h5><span class="messageTitleSum" ><span class="messageSum">共计1390条     共3页</span><select name="" id="" style="width:50px;">
+              <option value="" selected>1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+            </select></span>
+          </div>
+          <div class="widget-content nopadding">
+            <ul class="recent-posts">
+              <li>
+                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av1.jpg"> </div>
+                <div class="article-post">
+                  <div class="fr"><a href="#" class="btn btn-primary btn-mini">Edit</a>  <a href="#" class="btn btn-danger btn-mini">Delete</a></div>
+                  <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
+                  <p><a href="#">微观页面上出现评论前后出现大量空格，后台数据库检查下是否有脏数据导致的。</a> </p>
+                </div>
+              </li>
+              <li>
+                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av2.jpg"> </div>
+                <div class="article-post">
+                  <div class="fr"><a href="#" class="btn btn-primary btn-mini">Edit</a>  <a href="#" class="btn btn-danger btn-mini">Delete</a></div>
+                  <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
+                  <p><a href="#">服务器版本升级，虚拟机下载补丁上传文件到/tmp文件夹；执行unzip 补丁 -d /tmp ；修改如下路径权限为777 ：attachment，attachment/cn_img，attachment/photo，attachment/thumb，attachment/upload</a> </p>
+                </div>
+              </li>
+              <li>
+                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av3.jpg"> </div>
+                <div class="article-post">
+                  <div class="fr"><a href="#" class="btn btn-primary btn-mini">Edit</a>  <a href="#" class="btn btn-danger btn-mini">Delete</a></div>
+                  <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
+                  <p><a href="#">负载均衡做了如下设置：server{ listen 80; #监听80端口 server_name www.hostloc.com daigou.in; #绑定域名，多个域名的绑定，用空格分开 index index.html index.php index.htm;#默认读取的文件名 root /var/www/html; #绑定的虚拟目录</a> </p>
+                </div>
+              </li>
+              <li>
+                <button class="btn btn-warning btn-mini">查看所有</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Footer-part-->
+<div class="row-fluid">
+  <div id="footer" class="span12">Copyright &copy;2009 All rights reserved 神州数码信息系统有限公司 版权所有 </div>
+</div>
+<!--end-Footer-part-->
+<script src="js/jquery.min.js"></script> 
+<script src="js/jquery.ui.custom.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/jquery.uniform.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/jquery.dataTables.min.js"></script> 
+<script src="js/matrix.js"></script> 
+<script src="js/matrix.tables.js"></script>
+</body>
+</html>

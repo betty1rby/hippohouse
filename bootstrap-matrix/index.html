@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Matrix Admin</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap-responsive.min.css" />
+  <link rel="stylesheet" href="css/fullcalendar.css" />
+  <link rel="stylesheet" href="css/matrix-style.css" />
+  <link rel="stylesheet" href="css/matrix-media.css" />
+  <link rel="stylesheet" href="css/jquery.gritter.css" />
+  <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/jquery.gritter.css" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'></head>
+<body>
+  <!--Header-part-->
+  <div id="header">
+    <h1>
+      <a href="dashboard.html">运维管理系统</a>
+    </h1>
+  </div>
+  <!--close-Header-part-->
+
+  <!--top-Header-menu-->
+  <div id="user-nav" class="navbar navbar-inverse">
+    <ul class="nav">
+      <li>
+        <a href="#">2013年4月20日 上午9：00</a>
+      </li>
+      <li id="profile-messages" >
+        <a title="" href="#" data-toggle="dropdown" data-target="#profile-messages" class="dropdown-toggle"> <i class="icon icon-user"></i>
+          <span class="text" data-toggle="modal" href="#myModal">欢迎您，张苏南</span>
+        </a>
+      </li>
+      <li id="menu-messages">
+        <a href="messageList.html" target="_blank" > <i class="icon icon-envelope"></i>
+          <span class="text">消息</span>
+          <span class="label label-important">5</span>
+        </a>
+      </li>
+      <li class="">
+        <a title="" href="#">
+          <i class="icon icon-warning-sign"></i>
+          <span class="text">告警</span>
+        </a>
+      </li>
+      <li>
+        <a href="warning.html" target="_blank">
+          <span class="badge badge-important">
+            严重
+            <span class="label label-important">2</span>
+          </span>
+        </a>
+      </li>
+      <li>
+         <a href="warning.html" target="_blank">
+          <span class="badge badge-warning">
+            中度
+            <span class="label label-warning">7</span>
+          </span>
+        </a>
+      </li>
+      <li>
+         <a href="warning.html" target="_blank">
+          <span class="badge">
+            低度
+            <span class="label">3</span>
+          </span>
+        </a>
+      </li>
+      <li class="">
+        <a title="" href="login.html">
+          <i class="icon icon-share-alt"></i>
+          <span class="text">退出</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!--close-top-Header-menu-->
+  <!--sidebar-menu-->
+ 
+  <div id="sidebar">
+    <a href="#" class="visible-phone">
+      <i class="icon icon-home"></i>
+      首页
+    </a>
+    <ul>
+      <li class="active">
+       <a href="javascript:;" onclick='CreateDiv("indexContent","indexContent.html","首页")' id="index">
+          <i class="icon icon-home"></i>
+          <span>首页</span>
+        </a>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index01">
+          <i class="icon icon-fullscreen"></i>
+          <span>内容管理</span>
+          <span class="label label-important">3</span>
+        </a>
+        <ul>
+          <li>
+            <a href="javascript:;" onclick='CreateDiv("worms","worms.html","爬虫管理")'>爬虫管理</a>
+          </li>
+          <li>
+            <a href="">检索管理</a>
+          </li>
+          <li>
+            <a href="">内容管理</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index02">
+          <i class="icon icon-th-list"></i>
+          <span>日志管理</span>
+          <span class="label label-important">2</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">业务日志</a>
+          </li>
+          <li>
+            <a href="#">系统日志</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index03">
+          <i class="icon icon-th-list"></i>
+          <span>终端管理</span>
+          <span class="label label-important">2</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">终端信息</a>
+          </li>
+          <li>
+            <a href="#">终端监控</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index04">
+          <i class="icon icon-th-list"></i>
+          <span>服务仓库管理</span>
+          <span class="label label-important">3</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">服务基本信息管理</a>
+          </li>
+          <li>
+            <a href="#">服务上传</a>
+          </li>
+          <li>
+            <a href="#">服务下发</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index05">
+          <i class="icon icon-th-list"></i>
+          <span>第三方服务管理</span>
+          <span class="label label-important">2</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">基本信息</a>
+          </li>
+          <li>
+            <a href="#">配置信息</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" id="index06">
+          <i class="icon icon-home"></i>
+          <span>用户注册设置</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" id="index07">
+          <i class="icon icon-home"></i>
+          <span>服务业务管理</span>
+        </a>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index08">
+          <i class="icon icon-th-list"></i>
+          <span>路由管理</span>
+          <span class="label label-important">3</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">路由信息管理</a>
+          </li>
+          <li>
+            <a href="#">访问策略管理</a>
+          </li>
+          <li>
+            <a href="#">访问隔离管理</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index09">
+          <i class="icon icon-th-list"></i>
+          <span>开发环境管理</span>
+          <span class="label label-important">1</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">沙箱环境配置</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index10">
+          <i class="icon icon-th-list"></i>
+          <span>负载均衡管理</span>
+          <span class="label label-important">2</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">负载算法查询</a>
+          </li>
+          <li >
+            <a href="#">负载算法设置</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index11">
+          <i class="icon icon-th-list"></i>
+          <span>数据库服务管理</span>
+          <span class="label label-important">2</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">负载算法查询</a>
+          </li>
+          <li >
+            <a href="#">负载算法设置</a>
+          </li>
+        </ul>
+      </li>
+      <li class="submenu">
+        <a href="#" id="index12">
+          <i class="icon icon-th-list"></i>
+          <span>信息安全管理</span>
+          <span class="label label-important">6</span>
+        </a>
+        <ul>
+          <li >
+            <a href="#">企业安全组织方式</a>
+          </li>
+          <li >
+            <a href="#">资产分类与控制</a>
+          </li>
+          <li >
+            <a href="#">物理与环境安全</a>
+          </li>
+          <li >
+            <a href="#">访问控制</a>
+          </li>
+          <li >
+            <a href="#">业务连续性管理</a>
+          </li>
+          <li >
+            <a href="#">人员安全</a>
+          </li>
+          <li >
+            <a href="#">通信与运营安全</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <!--sidebar-menu-->
+
+  <!--main-container-part-->
+  <div id="content">
+    <!--breadcrumbs-->
+    <!--  <div id="content-header">
+    <div id="breadcrumb">
+      <a href="index.html" title="Go to Home" class="tip-bottom">
+        <i class="icon-home"></i>
+        Home
+      </a>
+    </div>
+  </div>
+  -->
+  <!--End-breadcrumbs-->
+
+  <!--Action boxes-->
+  <div class="container-fluid">
+    <div class="quick-actions_homepage">
+      <ul class="quick-actions">
+        <li class="bg_lb">
+          <a href="#" data-index="index01">
+            <i class="icon-dashboard"></i>
+            <!-- <span class="label label-important">20</span>
+          -->内容管理
+        </a>
+      </li>
+      <li class="bg_lg">
+        <a href="#" data-index="index02">
+          <i class="icon-signal"></i>
+          日志管理
+        </a>
+      </li>
+      <li class="bg_ly">
+        <a href="#" data-index="index03">
+          <i class="icon-inbox"></i>
+          <!-- <span class="label label-success">101</span>
+        --> 终端管理
+      </a>
+    </li>
+    <li class="bg_lo">
+      <a href="#" data-index="index04">
+        <i class="icon-th"></i>
+        服务仓库管理
+      </a>
+    </li>
+    <li class="bg_ls">
+      <a href="#" data-index="index05">
+        <i class="icon-fullscreen" ></i>
+        第三方服务管理
+      </a>
+    </li>
+    <li class="bg_lo">
+      <a href="#" data-index="index06">
+        <i class="icon-th-list"></i>
+        用户注册设置
+      </a>
+    </li>
+    <li class="bg_ls">
+      <a href="#" data-index="index07">
+        <i class="icon-tint"></i>
+        服务业务管理
+      </a>
+    </li>
+    <li class="bg_lb">
+      <a href="#" data-index="index08">
+        <i class="icon-pencil"></i>
+        路由管理
+      </a>
+    </li>
+    <li class="bg_lg" >
+      <a href="#" data-index="index09">
+        <i class="icon-calendar"></i>
+        开发环境管理
+      </a>
+    </li>
+    <li class="bg_lr">
+      <a href="#" data-index="index10" id="index10">
+        <i class="icon-info-sign"></i>
+        负载均衡管理
+      </a>
+    </li>
+    <li class="bg_lo">
+      <a href="#index11" data-index="index11">
+        <i class="icon-fullscreen"></i>
+        数据库服务管理
+      </a>
+    </li>
+    <li class="bg_ly">
+      <a href="#index12" data-index="index12">
+        <i class="icon-inbox"></i>
+        <!-- <span class="label label-success">101</span>
+      --> 信息安全管理
+    </a>
+  </li>
+</ul>
+</div>
+<!--End-Action boxes-->
+
+<div class="row-fluid" id="test3">
+  <div class="span12">
+    <ul class="clearfix" id="div_tab" style="margin-left:0;"></ul>
+    <div id="div_pannel"></div> 
+  </div>
+</div>
+
+</div>
+</div>
+
+<!--end-main-container-part-->
+
+<!--Footer-part-->
+
+<div class="row-fluid">
+<div id="footer" class="span12">Copyright &copy;2009 All rights reserved 神州数码信息系统有限公司 版权所有</div>
+</div>
+
+<!--end-Footer-part-->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.ui.custom.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.gritter.min.js"></script>
+<script src="js/jquery.peity.min.js"></script>
+<script src="js/matrix.js"></script>
+<script src="js/matrix.interface.js"></script>
+<script src="js/matrix.popover.js"></script>
+<script src="js/jquery.flot.min.js"></script>
+<script>
+  $(function  () {
+    $("#index").click();
+  })
+</script>
+<script type="text/javascript">
+  // This function is called from the pop-up menus to transfer to
+  // a different page. Ignore if the value returned is a null string:
+  function goPage (newURL) {
+
+      // if url is empty, skip the menu dividers and reset the menu selection to default
+      if (newURL != "") {
+      
+          // if url is "-", it is this page -- reset the menu:
+          if (newURL == "-" ) {
+              resetMenu();            
+          } 
+          // else, send page to designated URL            
+          else {  
+            document.location.href = newURL;
+          }
+      }
+  }
+
+// resets the menu selection upon entry to this page:
+function resetMenu() {
+   document.gomenu.selector.selectedIndex = 2;
+}
+</script>
+<script type="text/javascript">
+$(function () {
+    var datasets = {
+        "普通用户数": {
+            label: "普通用户数",
+            data: [[401, 5], [402, 10], [403, 3], [404, 1], [405, 9], [406, 17], [407, 21]]
+        },        
+        "实名制用户数": {
+            label: "实名制用户数",
+            data: [[401, 2], [402, 6], [403, 0], [404, 1], [405, 8], [406,10], [407, 6]]
+        },
+         "ios": {
+            label: "ios",
+            data: [[401, 5], [402, 10], [403, 3], [404, 21], [405, 91], [406, 7], [407, 21]]
+        },        
+        "android": {
+            label: "android",
+            data: [[401, 12], [402, 26], [403, 10], [404, 12], [405,118], [406,10], [407, 16]]
+        },
+         "日访问量": {
+            label: "日访问量",
+            data: [[401, 207], [402, 156], [403, 122], [404, 173], [405,302], [406,278], [407, 421]]
+        }, 
+        "日独立IP数": {
+            label: "日独立IP数",
+            data: [[401, 23], [402, 17], [403, 65], [404, 23], [405,45], [406, 21], [407, 73]]
+        },        
+        "访客数": {
+            label: "访客数",
+            data: [[401, 24], [402, 26], [403, 31], [404, 28], [405, 52], [406,18], [407, 57]]
+        }
+    };
+
+    // hard-code color indices to prevent them from shifting as
+    // countries are turned on/off
+    var i = 0;
+    $.each(datasets, function(key, val) {
+        val.color = i;
+        ++i;
+    });
+    
+    // insert checkboxes 
+    var choiceContainer = $("#choices");
+    $.each(datasets, function(key, val) {
+        choiceContainer.append('<br/><input type="checkbox" name="' + key +
+                               '" checked="checked" id="id' + key + '">' +
+                               '<label for="id' + key + '">'
+                                + val.label + '</label>');
+    });
+    choiceContainer.find("input").click(plotAccordingToChoices);
+
+    
+    function plotAccordingToChoices() {
+        var data = [];
+
+        choiceContainer.find("input:checked").each(function () {
+            var key = $(this).attr("name");
+            if (key && datasets[key])
+                data.push(datasets[key]);
+        });
+
+        if (data.length > 0)
+            $.plot($("#placeholder"), data, {
+                yaxis: { min: 0 },
+                xaxis: { tickDecimals: 0 }
+            });
+    }
+
+    plotAccordingToChoices();
+});
+</script>
+ <script type="text/javascript">
+        
+    </script>
+<div class="modal hide in" id="myModal" style="display: none;" aria-hidden="false">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal">×</button>
+<h3>个人信息管理</h3>
+</div>
+<div class="modal-body">
+
+<ul class="nav nav-tabs">
+<li class="active">
+  <a href="#tabX" data-toggle="tab">个人信息</a>
+</li>
+<li>
+  <a href="#tabY" data-toggle="tab">密码修改</a>
+</li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane active" id="tabX">
+  <form action="" class="form-horizontal">
+    <div class="control-group">
+      <label for="" class="control-label">姓名:</label>
+      <div class="controls">
+        <input type="text" name="" id="" placeholder="刘好" disabled></div>
+      <label for="" class="control-label">登录名:</label>
+      <div class="controls">
+        <input type="text" name="" id="" placeholder="admin" disabled></div>
+      <label for="" class="control-label">权限:</label>
+      <div class="controls">
+        <input type="text" name="" id="" placeholder="超级管理员" disabled></div>
+      <label for="" class="control-label">手机号:</label>
+      <div class="controls">
+        <input type="text" id="inputEmail" placeholder="13646159025"></div>
+      <label for="" class="control-label">电子邮箱:</label>
+      <div class="controls">
+        <input type="text" id="inputEmail" placeholder="lh327@163.com"></div>
+    </div>
+  </form>
+</div>
+<div class="tab-pane" id="tabY">
+  <form action="" class="form-horizontal">
+    <div class="control-group">
+      <label for="" class="control-label">原密码:</label>
+      <div class="controls">
+        <input type="password" name="" id="" placeholder="" ></div>
+      <label for="" class="control-label">新密码:</label>
+      <div class="controls">
+        <input type="text" id="inputEmail"></div>
+      <label for="" class="control-label">确认新密码:</label>
+      <div class="controls">
+        <input type="text" id="inputEmail"></div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<a href="#" class="btn" data-dismiss="modal">关闭</a>
+<a href="#" id="add-event-submit" class="btn btn-primary">保存</a>
+</div>
+</div>
+</body>
+</html>

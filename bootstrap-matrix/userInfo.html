@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title></title>
+  <script src="js/jquery.min.js"></script>
+	<script>
+$(function () {
+		$("#lockToggle").toggle(function  () {
+			$(this).text("收起");
+			$("#lockRecords").show();
+		},function  () {
+			$(this).text("展开");
+			$("#lockRecords").hide();
+		});
+	})
+	</script>
+</head>
+<body>
+	<div class="#">
+  <table class="idTable">
+    <tr>
+      <td>用户名: <span>lisa</span></td>
+      <td>真实姓名: <span> 李萨</span></td>
+    </tr>
+    <tr>
+      <td>性别：<span>女</span></td>
+      <td>民族：<span>汉</span></td>
+    </tr>
+    <tr>
+      <td>身份证号：<span>130684198901230361</span></td>
+      <td>注册时间：<span>2012-06-22 20:08:02</span></td>
+    </tr>
+    <tr>
+      <td>邮箱地址：<span>lis@126.com</span></td>
+      <td>手机号码：<span>13544555728</span></td>
+    </tr>
+    <tr>
+      <td colspan="2">地址:<span>北京市海淀区上地九街9号</span></td>
+    </tr>
+    <tr>
+      <td>目前是否锁定：<span>否</span></td>
+      <td>锁定记录：<span><button class="btn btn-primary btn-mini" id="lockToggle" >展开</button></span></td>
+  </tr>
+  </table>
+  <div class="row-fluid" id="lockRecords">
+      <div class="span12">
+      <div class="widget-box">
+          <div class="widget-title"> <span class="icon"> <i class="icon-th"></i> </span>
+            <h5>锁定解锁记录</h5>
+          </div>
+          <div class="widget-content nopadding">
+            <table class="table table-bordered table-striped" id="citizenSearch">
+              <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>操作</th>
+                  <th>办理时间</th>
+                  <th>锁定/解锁原因</th>
+                  <th>经办人</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="odd gradeX">
+                  <td>1</td>
+                  <td>锁定</td>
+                  <td>2012-08-12</td>
+                  <td>账户异常</td>
+                  <td>lydia/张绣</td>
+                </tr>
+                <tr class="odd gradeX">
+                  <td>2</td>
+                  <td>解锁</td>
+                  <td>2012-08-02</td>
+                  <td>账户恢复正常</td>
+                  <td>lydia/张绣</td>
+                </tr>
+                <tr class="odd gradeX">
+                  <td>3</td>
+                  <td>锁定</td>
+                  <td>2012-07-12</td>
+                  <td>账户异常</td>
+                  <td>lydia/张绣</td>
+                </tr>
+                <tr class="odd gradeX">
+                  <td>1</td>
+                  <td>锁定</td>
+                  <td>2012-07-02</td>
+                  <td>账户恢复正常</td>
+                  <td>lydia/张绣</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</body>
+</html>
